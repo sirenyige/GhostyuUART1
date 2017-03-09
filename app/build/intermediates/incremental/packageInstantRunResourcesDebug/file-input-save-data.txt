@@ -1,0 +1,30 @@
+#Internal package file, do not edit.
+#Wed Mar 08 16:00:04 CST 2017
+2.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+5.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\dis_values.xml
+5.set=ANDROID_RESOURCE
+3.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+6.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\message_detail.xml
+2.set=ANDROID_RESOURCE
+4.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+7.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\title_bar.xml
+7.set=ANDROID_RESOURCE
+count=9
+0.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\device_list.xml
+5.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+4.set=ANDROID_RESOURCE
+6.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\device_element.xml
+1.set=ANDROID_RESOURCE
+7.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+2.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+6.set=ANDROID_RESOURCE
+0.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\nrfuart_hdpi_icon.png
+3.set=ANDROID_RESOURCE
+1.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE
