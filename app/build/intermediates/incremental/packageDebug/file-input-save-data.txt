@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Mar 08 16:39:58 CST 2017
+#Fri Mar 10 11:19:30 CST 2017
 2.base=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.file=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
 5.set=ANDROID_RESOURCE

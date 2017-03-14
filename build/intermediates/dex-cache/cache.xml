@@ -3,12 +3,84 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\wy\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\pre-dexed\debug\gson-2.8.0_e9d5ad84f020732449034de687b65fc39e4adfa1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="50473a580901d048b0db936d5429c07ca4c21cc3">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_d69feb4969c6789d126cf0f6db57450452bb24d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wy\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.6.0_a27ff49e0e108418ecf1b36f9400bd39e20f744e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wy\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_e9d5ad84f020732449034de687b65fc39e4adfa1\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\wy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
         <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_4d7917a62320aed8a2d07b0c7c8b40955c09b8ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wy\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_a27ff49e0e108418ecf1b36f9400bd39e20f744e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_946e6cf820447f7af7bd877442df44db14dc8650\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wy\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.11.0_bca7bff4a5cf504ad38f3bd9e1621bccae7d1967\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wy\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\pre-dexed\debug\okio-1.11.0_bca7bff4a5cf504ad38f3bd9e1621bccae7d1967.jar" />
     </item>
 
 </items>

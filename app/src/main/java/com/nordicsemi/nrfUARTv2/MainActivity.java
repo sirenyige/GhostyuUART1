@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2013 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.nordicsemi.nrfUARTv2;
 
 
@@ -22,6 +6,10 @@ package com.nordicsemi.nrfUARTv2;
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.util.Date;
+import com.google.gson.Gson;
+import okhttp3.*;
+import okio.*;
+import java.io.IOException;
 
 
 import com.nordicsemi.nrfUARTv2.UartService;
@@ -68,6 +56,9 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private static final int UART_PROFILE_CONNECTED = 20;
     private static final int UART_PROFILE_DISCONNECTED = 21;
     private static final int STATE_OFF = 10;
+    private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+    private OkHttpClient client = new OkHttpClient();
 
     TextView mRemoteRssiVal;
     RadioGroup mRg;
@@ -78,8 +69,13 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private ListView messageListView;
     private ArrayAdapter<String> listAdapter;
     private Button btnConnectDisconnect,btnSend;
-    private EditText edtMessage;
+    private EditText edtMessage,filename,urlconnect;
+    private TextView num_spectrum;
     private int NumofData=0;
+    private int numofspectrum = 0;
+    private byte[] data_list = new byte[512];
+    private String filenamestr="";
+    private String connect_url="";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,12 +94,53 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         messageListView.setAdapter(listAdapter);
         messageListView.setDivider(null);
         //按键绑定
+        Button urlConfirm = (Button) findViewById(R.id.connect_url_button);
+        final Button filenameConfirm = (Button) findViewById(R.id.file_name_button);
         btnConnectDisconnect=(Button) findViewById(R.id.btn_select);
         btnSend=(Button) findViewById(R.id.sendButton);
         //发送文本框绑定
         edtMessage = (EditText) findViewById(R.id.sendText);
+        filename = (EditText) findViewById(R.id.file_name);
+        urlconnect = (EditText) findViewById(R.id.connect_url);
+        //显示文本框绑定
+        num_spectrum = (TextView) findViewById(R.id.num_spectrum);
         //开启服务UartService
         service_init();
+
+        //filename_confirm按键事件
+        //更新已采集的光谱数量和文件名
+        filenameConfirm.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String text_content = filename.getText().toString();
+                if (text_content.length() == 0){
+                    showMessage("Please enter filename");
+                } else if (text_content != filenamestr){
+                    numofspectrum = 0;
+                    num_spectrum.setText(String.valueOf(numofspectrum));
+                    filenamestr = text_content;
+                    showMessage("Filename Confirm");
+                }
+            }
+        });
+
+        //url_confirm按键事件
+        urlConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text_content = urlconnect.getText().toString();
+                if (text_content.length() == 0){
+                    showMessage("Please enter IP");
+                } else {
+                    text_content = "http://"+text_content+"/getdata";
+                    if (text_content != connect_url){
+                        connect_url = text_content;
+                        showMessage("Url Confirm");
+                    }
+
+                }
+            }
+        });
 
      
        
@@ -185,7 +222,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         
         //Handler events that received from UART service 
         public void handleMessage(Message msg) {
-  
+            num_spectrum.setText(String.valueOf(numofspectrum));
         }
     };
 
@@ -243,12 +280,61 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                  runOnUiThread(new Runnable() {
                      public void run() {
                          try {
-                         	//String text = new String(txValue, "UTF-8");
-                             String text = String.valueOf(txValue.length);
+                             //需要收集512个8位数据，即256个16位信号
+                             for (byte b : txValue) {
+                                 data_list[NumofData] = b;
+                                 NumofData++;
+                             }
+                             //如果收集满则封装数据并发送网络数据
+                             //已采集光谱数据数+1
+                             if (NumofData>511){
+                                 NumofData = 0;
+                                 num_spectrum.setText(String.valueOf(numofspectrum));
+                                 showMessage("Data Get");
+
+
+                                 new Thread(new Runnable() {
+                                     @Override
+                                     public void run() {
+                                         SpectrumData spectrumData = new SpectrumData(filenamestr,data_list);
+                                         //showMessage(connect_url);
+                                         Gson gson = new Gson();
+                                         String json = gson.toJson(spectrumData);
+                                         //showMessage("2");
+                                         RequestBody body = RequestBody.create(JSON, json);
+                                         Request request = new Request.Builder()
+                                                 .url(connect_url)
+                                                 .post(body)
+                                                 .build();
+                                         //showMessage("3");
+                                         try {
+                                             Response response = client.newCall(request).execute();
+                                             //showMessage("4");
+                                             if (response.isSuccessful()){
+                                                 //showMessage(response.body().string());
+                                             } else {
+                                                 //showMessage("Bad connect");
+                                             }
+                                             numofspectrum++;
+                                             Message message = new Message();
+                                             mHandler.sendMessage(message);
+                                             //num_spectrum.setText(String.valueOf(numofspectrum));
+                                         } catch (Exception e){
+                                             e.printStackTrace();
+                                             //showMessage(e.toString());
+                                         }
+
+                                     }
+                                 }).start();
+
+
+                             }
+                             /*
+                             String text = new String(txValue, "UTF-8");
                          	String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
                         	 	listAdapter.add("["+currentDateTimeString+"] RX: "+text);
                         	 	messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
-                        	
+                        	*/
                          } catch (Exception e) {
                              Log.e(TAG, e.toString());
                          }
@@ -265,10 +351,6 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         }
     };
 
-    //数据转换
-    private int byte2int(byte[] data){
-        return ((data[0] & 0xFF)<<8|(data[1] & 0xFF));
-    }
     //启动服务
     private void service_init() {
         Intent bindIntent = new Intent(this, UartService.class);

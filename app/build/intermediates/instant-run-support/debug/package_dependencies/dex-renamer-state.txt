@@ -1,4 +1,13 @@
-#Wed Mar 08 16:00:14 CST 2017
-base.0=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_4d7917a62320aed8a2d07b0c7c8b40955c09b8ec
-renamed.0=classes.dex
-file.0=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_4d7917a62320aed8a2d07b0c7c8b40955c09b8ec\\classes.dex
+#Thu Mar 09 22:41:56 CST 2017
+renamed.3=classes3.dex
+renamed.2=classes.dex
+renamed.1=classes4.dex
+renamed.0=classes2.dex
+base.3=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okio-1.11.0_bca7bff4a5cf504ad38f3bd9e1621bccae7d1967
+base.2=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\gson-2.8.0_e9d5ad84f020732449034de687b65fc39e4adfa1
+base.1=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_4d7917a62320aed8a2d07b0c7c8b40955c09b8ec
+base.0=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okhttp-3.6.0_a27ff49e0e108418ecf1b36f9400bd39e20f744e
+file.3=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okio-1.11.0_bca7bff4a5cf504ad38f3bd9e1621bccae7d1967\\classes.dex
+file.2=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\gson-2.8.0_e9d5ad84f020732449034de687b65fc39e4adfa1\\classes.dex
+file.1=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_4d7917a62320aed8a2d07b0c7c8b40955c09b8ec\\classes.dex
+file.0=D\:\\androidtest\\bluetooth\\Android\\GhostyuUART1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okhttp-3.6.0_a27ff49e0e108418ecf1b36f9400bd39e20f744e\\classes.dex

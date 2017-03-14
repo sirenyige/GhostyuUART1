@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="24"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="22"
     build-mode="FULL"
-    density="420dpi"
+    density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1488961802965"
+    timestamp="1489113417895"
     token="6957751757949529347"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="470" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="49" />
     <task
         name="verifier"
-        duration="0" />
+        duration="15" />
 
+    <artifact
+        location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
     <artifact
         location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
@@ -39,9 +45,6 @@
         location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
         location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
@@ -56,14 +59,17 @@
     <artifact
         location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
-    <artifact
-        location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\outputs\apk\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1488961802965"
+        timestamp="1489113417895"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
@@ -80,9 +86,6 @@
             location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
@@ -97,9 +100,6 @@
         <artifact
             location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
-        <artifact
-            location="D:\androidtest\bluetooth\Android\GhostyuUART1\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
